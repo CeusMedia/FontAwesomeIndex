@@ -28,15 +28,14 @@ class FontAwesomeIndex{
 
 	protected function render ($iconClasses) {
 		$mode	= $this->mode;
-		$body	= require_once 'body.phpt';
 		$page	= new UI_HTML_PageFrame();
-		$page->addStylesheet('http://cdn.int1a.net/css/bootstrap.min.css');
-		$page->addStylesheet('http://cdn.int1a.net/font/FontAwesome/font-awesome.min.css');
+		$page->addStylesheet('inc/bootstrap/bootstrap.min.css');
+		$page->addStylesheet('inc/fontawesome/font-awesome.min.css');
 		$page->addStylesheet('inc/style.css');
-		$page->addJavaScript('http://cdn.int1a.net/js/jquery/1.10.2.min.js');
-		$page->addJavaScript('http://cdn.int1a.net/js/bootstrap.min.js');
+		$page->addJavaScript('inc/jquery-1.10.2.min.js');
+		$page->addJavaScript('inc/bootstrap/bootstrap.min.js');
 		$page->addJavaScript('inc/script.js');
-		$page->addBody($body);
+		$page->addBody(require_once 'body.phpt');
 		print $page->build(array('class' => $this->mode));
 	}
 }
