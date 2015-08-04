@@ -1,5 +1,5 @@
 <?php
-$darkMode		= TRUE;															//  flag: force dark mode
+$darkMode		= !TRUE;														//  flag: force dark mode
 $pathCmCommon	= 'CeusMedia/Common/';											//  define if local installation without composer
 
 //  --  NO NEET TO CHANGE BELOW  -----------------------------------------------//
