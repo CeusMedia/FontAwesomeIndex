@@ -1,0 +1,25 @@
+body.dark {
+	background-color: rgba(0,0,0,1);
+	color: rgba(255,255,255,0.75);
+	}
+
+#icon-matrix {
+	overflow-x: none;
+	overflow-y: auto;
+	margin: 0;
+	}
+#icon-matrix li {
+	float: left;
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+	text-align: center;
+	margin: 3px;
+	background-image: none;
+	}
+.fa-2x {
+	line-height: 2em;
+	}
+.fa-4x {
+	line-height: 1em;
+	}
