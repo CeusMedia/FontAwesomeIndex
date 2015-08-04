@@ -16,7 +16,7 @@ class FontAwesomeIndex{
 	protected function read () {
 		$list		= array();
 		$pattern	= '/^\.fa-(.+):before {$/';
-		$content	= file_get_contents( "font-awesome.css" );
+		$content	= file_get_contents( "inc/fontawesome/font-awesome.css" );
 		$lines		= explode( "\n", $content );
 		foreach ($lines as $line) {
 			if (preg_match($pattern, $line)) {
