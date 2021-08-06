@@ -17,6 +17,9 @@ body.dark {
 	margin: 3px;
 	background-image: none;
 	}
+#icon-matrix li i.fa-inverse{
+	color: rgba(255,255,255,0.8);
+	}
 .fa-2x {
 	line-height: 2em;
 	}

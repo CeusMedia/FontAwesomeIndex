@@ -3,7 +3,7 @@
     "description": "Standalone index of font awesome for local or offline use.",
     "require": {
         "php": ">=5.3.0",
-        "ceus-media/common": ">=0.8.1"
+        "ceus-media/common": "^0.8"
     },
     "license": "GPL-3.0+",
     "authors": [

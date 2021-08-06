@@ -1,19 +1,24 @@
 <?php
-class FontAwesomeIndex{
+use UI_HTML_PageFrame as HtmlPage;
 
+class FontAwesomeIndex
+{
 	protected $mode;
 
-	public function __construct ($darkMode = FALSE ) {
+	public function __construct ($darkMode = FALSE)
+	{
 		$list	= $this->read();
 		$this->mode	= $darkMode ? 'dark' : 'bright';
-		$this->render($list);
+		print($this->render($list));
 	}
 
-	static public function handleException ($e) {
+	public static function handleException ($e)
+	{
 
 	}
 
-	protected function read () {
+	protected function read (): array
+	{
 		$list		= array();
 		$pattern	= '/^\.fa-(.+):before {$/';
 		$content	= file_get_contents( "inc/fontawesome/font-awesome.css" );
@@ -26,9 +31,10 @@ class FontAwesomeIndex{
 		return $list;
 	}
 
-	protected function render ($iconClasses) {
+	protected function render ($iconClasses): string
+	{
 		$mode	= $this->mode;
-		$page	= new UI_HTML_PageFrame();
+		$page	= new HtmlPage();
 		$page->addStylesheet('inc/bootstrap/bootstrap.min.css');
 		$page->addStylesheet('inc/fontawesome/font-awesome.min.css');
 		$page->addStylesheet('inc/style.css');
@@ -36,6 +42,6 @@ class FontAwesomeIndex{
 		$page->addJavaScript('inc/bootstrap/bootstrap.min.js');
 		$page->addJavaScript('inc/script.js');
 		$page->addBody(require_once 'body.phpt');
-		print $page->build(array('class' => $this->mode));
+		return $page->build(array('class' => $this->mode));
 	}
 }
